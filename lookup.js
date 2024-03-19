@@ -9,12 +9,13 @@ function createDataRetriever() {
           fetch('https://raw.githubusercontent.com/hull-city-council/bin-collection-missed-streets/main/missed-streets.json')
               .then((response) => {
                     if (response.ok) {
-                     return response.json();
+                    return response.json();
                     }
               })
               .then((data) => {
-                    if (data[0].events < 1) {
+                    if (data[0].Events < 1) {
                       this.isLoading = false;
+                      return;
                     }
                   this.missedStreets = data[0].streets;
                   this.isData = true;
