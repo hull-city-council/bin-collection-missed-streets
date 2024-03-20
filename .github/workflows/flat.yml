@@ -1,4 +1,4 @@
-name: Bin collections missed streets - past 7 days
+name: Bin collections missed streets
 
 on:
   push:
